@@ -30,7 +30,13 @@ namespace MovieCatalogProject.Controllers
 
             return View();
         }
-
+        public ActionResult MoviesMostPopularing()
+        {
+            MovieRepository repo = new MovieRepository(db);
+            IEnumerable<ViewModels.PopularMovieViewModel> movies = repo.GetMoviesPopularity();
+            movies = movies.OrderByDescending(p=>p.Rating);
+            return PartialView(movies.Take(6));
+        }
         public JsonResult SendRating(string r, string s, string id, string url)
         {
             int autoId = 0;

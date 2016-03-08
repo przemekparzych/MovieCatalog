@@ -24,10 +24,14 @@ textarea {
 .width-100{
     width:100%;
 }
+.width-400{
+    width:400px;
+}
 .textarea-400 {
     max-width: 400px;
     width:auto;
 }
+
 .textarea-150{
     height:150px;
 }

@@ -89,7 +89,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:31</publishTime>
     </File>
     <File Include="bin/MovieCatalogProject.dll">
-      <publishTime>03/07/2016 17:41:34</publishTime>
+      <publishTime>03/08/2016 16:22:49</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>02/19/2016 19:10:36</publishTime>
@@ -164,7 +164,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:23</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>03/07/2016 15:55:51</publishTime>
+      <publishTime>03/07/2016 18:56:16</publishTime>
     </File>
     <File Include="Controllers/AccountController.cs">
       <publishTime>02/19/2016 19:10:37</publishTime>
@@ -216,6 +216,54 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="images/yellowstar.gif">
       <publishTime>02/26/2016 10:28:04</publishTime>
+    </File>
+    <File Include="Models/AccountViewModels.cs">
+      <publishTime>02/19/2016 19:10:37</publishTime>
+    </File>
+    <File Include="Models/Cast.cs">
+      <publishTime>02/24/2016 08:34:50</publishTime>
+    </File>
+    <File Include="Models/CastType.cs">
+      <publishTime>02/23/2016 14:31:02</publishTime>
+    </File>
+    <File Include="Models/CastViewModel.cs">
+      <publishTime>03/08/2016 17:18:36</publishTime>
+    </File>
+    <File Include="Models/Category.cs">
+      <publishTime>02/23/2016 12:38:59</publishTime>
+    </File>
+    <File Include="Models/Comment.cs">
+      <publishTime>03/04/2016 07:41:28</publishTime>
+    </File>
+    <File Include="Models/IdentityModels.cs">
+      <publishTime>03/04/2016 07:41:28</publishTime>
+    </File>
+    <File Include="Models/Movie.cs">
+      <publishTime>03/07/2016 12:47:08</publishTime>
+    </File>
+    <File Include="Models/MoviesViewModel.cs">
+      <publishTime>02/23/2016 13:37:48</publishTime>
+    </File>
+    <File Include="Models/Person.cs">
+      <publishTime>02/23/2016 13:39:04</publishTime>
+    </File>
+    <File Include="Models/Rate.cs">
+      <publishTime>02/19/2016 19:21:13</publishTime>
+    </File>
+    <File Include="Models/Repository/IRepository.cs">
+      <publishTime>02/26/2016 16:35:37</publishTime>
+    </File>
+    <File Include="Models/Repository/MovieRepository.cs">
+      <publishTime>03/08/2016 15:53:51</publishTime>
+    </File>
+    <File Include="Models/Repository/Repository.cs">
+      <publishTime>03/05/2016 18:20:38</publishTime>
+    </File>
+    <File Include="Models/Repository/SearchRepository.cs">
+      <publishTime>03/05/2016 19:15:05</publishTime>
+    </File>
+    <File Include="Models/VoteModel.cs">
+      <publishTime>02/26/2016 09:02:14</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>02/19/2016 19:11:04</publishTime>
@@ -308,7 +356,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:19</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/19/2016 19:10:19</publishTime>
+      <publishTime>03/08/2016 15:47:19</publishTime>
+    </File>
+    <File Include="Views/Home/MoviesMostPopularing.cshtml">
+      <publishTime>03/08/2016 17:22:55</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>02/19/2016 19:10:38</publishTime>
@@ -338,7 +389,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/07/2016 10:03:38</publishTime>
     </File>
     <File Include="Views/Movie/Index.cshtml">
-      <publishTime>03/07/2016 09:34:45</publishTime>
+      <publishTime>03/08/2016 11:22:44</publishTime>
     </File>
     <File Include="Views/Movie/MoviesList.cshtml">
       <publishTime>03/07/2016 15:55:51</publishTime>
@@ -374,7 +425,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:39</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/07/2016 18:34:00</publishTime>
+      <publishTime>03/08/2016 10:31:56</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/19/2016 19:10:39</publishTime>
@@ -392,7 +443,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:19</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/07/2016 17:41:59</publishTime>
+      <publishTime>03/08/2016 16:24:27</publishTime>
     </File>
   </ItemGroup>
 </Project>

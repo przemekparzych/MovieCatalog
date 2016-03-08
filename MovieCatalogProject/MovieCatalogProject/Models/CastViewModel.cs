@@ -19,6 +19,7 @@ namespace MovieCatalogProject.Models
         public string LastName { get; set; }
        
     }
+
    public class CastsViewModel
     {
         public List<CastViewModel> Casts { get; set; }

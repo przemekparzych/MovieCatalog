@@ -68,5 +68,52 @@ namespace MovieCatalogProject.Models.Repository
             }
             return comments;
         }
+        public IEnumerable<PopularMovieViewModel> GetMoviesPopularity()
+        {
+            List<PopularMovieViewModel> movies = new List<PopularMovieViewModel>();
+            foreach(var item in GetAllMovies())
+            {
+                PopularMovieViewModel movie = new PopularMovieViewModel()
+                {
+                    MovieId = item.Id,
+                    Poster = item.PosterUrl,
+                    Rating = GetRatting(item.Votes),
+                    Title = item.Title
+                };
+                movies.Add(movie);
+            }
+            return movies;
+        }
+        float GetRatting(string Model)
+        {
+            Single m_Average = 0;
+            Single m_totalNumberOfVotes = 0;
+            Single m_totalVoteCount = 0;
+            Single m_currentVotesCount = 0;
+            string m_inPercent = "";
+            if (Model == null)
+                return 0;
+            else
+            {
+                string[] votes = Model.Split(',');
+                for (int i = 0; i < votes.Length; i++)
+                {
+                    m_currentVotesCount = int.Parse(votes[i]);
+                    m_totalNumberOfVotes = m_totalNumberOfVotes + m_currentVotesCount;
+                    m_totalVoteCount = m_totalVoteCount + (m_currentVotesCount * (i + 1));
+                }
+                if (m_totalNumberOfVotes != 0)
+                {
+                    m_Average = m_totalVoteCount / m_totalNumberOfVotes;
+                    m_inPercent = ((m_Average * 65) / 5).ToString().Split(',').First();
+                }
+                else
+                {
+                    m_Average = 0f;
+                    m_inPercent = "0";
+                }
+                return m_Average;
+            }
+        }
     }
 }
