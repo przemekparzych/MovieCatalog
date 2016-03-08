@@ -89,7 +89,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:31</publishTime>
     </File>
     <File Include="bin/MovieCatalogProject.dll">
-      <publishTime>03/08/2016 16:22:49</publishTime>
+      <publishTime>03/08/2016 19:53:18</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>02/19/2016 19:10:36</publishTime>
@@ -313,11 +313,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/_references.js">
       <publishTime>02/19/2016 19:11:04</publishTime>
     </File>
+    <File Include="ViewModels/CommentViewModel.cs">
+      <publishTime>02/25/2016 15:53:36</publishTime>
+    </File>
+    <File Include="ViewModels/CreateMovieViewModel.cs">
+      <publishTime>03/07/2016 11:25:35</publishTime>
+    </File>
+    <File Include="ViewModels/ManageViewModels.cs">
+      <publishTime>02/19/2016 19:10:37</publishTime>
+    </File>
+    <File Include="ViewModels/MovieViewModel.cs">
+      <publishTime>03/07/2016 07:29:57</publishTime>
+    </File>
+    <File Include="ViewModels/PopularMovieViewModel.cs">
+      <publishTime>03/08/2016 15:25:28</publishTime>
+    </File>
+    <File Include="ViewModels/SearchViewModel.cs">
+      <publishTime>03/05/2016 17:49:24</publishTime>
+    </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>02/19/2016 19:10:37</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>02/19/2016 19:10:37</publishTime>
+      <publishTime>03/08/2016 18:06:35</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
       <publishTime>02/19/2016 19:10:37</publishTime>
@@ -329,10 +347,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:37</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>02/19/2016 19:10:37</publishTime>
+      <publishTime>03/08/2016 18:08:54</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>02/19/2016 19:10:38</publishTime>
+      <publishTime>03/08/2016 18:08:54</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>02/19/2016 19:10:38</publishTime>
@@ -356,10 +374,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:19</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/08/2016 15:47:19</publishTime>
+      <publishTime>03/08/2016 19:13:56</publishTime>
     </File>
     <File Include="Views/Home/MoviesMostPopularing.cshtml">
-      <publishTime>03/08/2016 17:22:55</publishTime>
+      <publishTime>03/08/2016 19:13:56</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>02/19/2016 19:10:38</publishTime>
@@ -425,10 +443,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2016 19:10:39</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/08/2016 10:31:56</publishTime>
+      <publishTime>03/08/2016 18:01:27</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>02/19/2016 19:10:39</publishTime>
+      <publishTime>03/08/2016 18:01:27</publishTime>
     </File>
     <File Include="Views/Shared/_VoteNow.cshtml">
       <publishTime>03/01/2016 16:58:02</publishTime>

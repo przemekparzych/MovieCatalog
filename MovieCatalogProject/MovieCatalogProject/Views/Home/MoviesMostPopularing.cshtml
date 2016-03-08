@@ -2,18 +2,16 @@
 
 
 <div class="container">
-    <h3>Nawyżej oceniane filmy</h3>
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col col-lg-12">
-                <div class="col col-lg-2" id="@item.MovieId">
 
+    <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col col-md-2">
                     <a href="/Movie/Index/@item.MovieId">
                         <img src=@Url.Content(@"~\images\"+item.Poster) alt="@item.Title" class="img-responsive" width="160" height="250">
                     </a>
                 </div>
-            </div>
-        }
+
+            }
     </div>
 </div>

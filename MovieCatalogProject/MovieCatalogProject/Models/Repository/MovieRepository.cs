@@ -84,6 +84,23 @@ namespace MovieCatalogProject.Models.Repository
             }
             return movies;
         }
+        public IEnumerable<PopularMovieViewModel> GetMoviesMostCommented()
+        {
+            List<PopularMovieViewModel> movies = new List<PopularMovieViewModel>();
+            foreach (var item in GetAllMovies())
+            {
+                PopularMovieViewModel movie = new PopularMovieViewModel()
+                {
+                    MovieId = item.Id,
+                    Poster = item.PosterUrl,
+                    Rating = GetComments(item.Id).Comments.Count,
+                    Title = item.Title
+                };
+                movies.Add(movie);
+            }
+            return movies;
+        }
+
         float GetRatting(string Model)
         {
             Single m_Average = 0;

@@ -37,6 +37,13 @@ namespace MovieCatalogProject.Controllers
             movies = movies.OrderByDescending(p=>p.Rating);
             return PartialView(movies.Take(6));
         }
+        public ActionResult MoviesMostCommented()
+        {
+            MovieRepository repo = new MovieRepository(db);
+            IEnumerable<ViewModels.PopularMovieViewModel> movies = repo.GetMoviesMostCommented();
+            movies = movies.OrderByDescending(p => p.Rating);
+            return PartialView("MoviesMostPopularing", movies.Take(6));
+        }
         public JsonResult SendRating(string r, string s, string id, string url)
         {
             int autoId = 0;
