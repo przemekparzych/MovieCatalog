@@ -1,0 +1,22 @@
+﻿@model MovieCatalogProject.ViewModels.CommentsViewModel
+
+
+<div class="row">
+    <div class="col col-md-12 ">
+        <div class="panel panel-primary  bg ">
+            <div class="panel-heading">
+                <h3 class="panel-title">Komentarze</h3>
+            </div>
+            <ul class="list-group">
+                @foreach (var item in Model.Comments)
+                {
+                    <li class="list-group-item  bg">
+                        <p class="name">@item.UserName.Split('@')[0]</p>
+                        @item.Comment
+                    </li>
+                }
+            </ul>
+        </div>
+
+    </div>
+</div>

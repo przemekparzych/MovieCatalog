@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MovieCatalogProject.ViewModels.MovieViewModel>
+
+@{
+    ViewBag.Title = "MoviesList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Wybrane filmy</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<div class="container">
+    <div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-3 margin-top-15 height-500" >
+            <div class="thumbnail " style="background-color:aliceblue">
+
+                <div class="thumbnail height-250 bg">
+                    <img src=@Url.Content(@"~\images\"+item.PosterUrl) alt="@item.Title" class="img-responsive" width="160" height="250">
+                </div>
+                <div class="caption thumbnail bg height-300">
+                    <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+                    <p></p>
+                        @if(item.Description.ToString().Count() > 210)
+                        {
+                            @item.Description.ToString().Remove(210)<span>...</span>
+                        }
+                        else
+                        {
+                            @item.Description.ToString();
+                        }
+                    
+                    <p><a href="~/Movie/Index/@item.Id" class="btn btn-primary" role="button">Pokaż szczegóły filmu</a></p>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+    
+</div>

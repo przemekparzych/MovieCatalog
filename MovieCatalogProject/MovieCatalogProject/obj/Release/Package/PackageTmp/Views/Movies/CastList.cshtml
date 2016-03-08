@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MovieCatalogProject.Models.Cast>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CastType.CastTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movie.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CastType.CastTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movie.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CastId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CastId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CastId })
+        </td>
+    </tr>
+}
+
+</table>

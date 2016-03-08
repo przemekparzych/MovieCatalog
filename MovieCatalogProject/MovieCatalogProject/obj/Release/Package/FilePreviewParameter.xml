@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="parzypr-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\dom\\Documents\\Visual\ Studio\ 2015\\Projects\\MovieCatalogProject\\MovieCatalogProject\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\dom\\Documents\\Visual\ Studio\ 2015\\Projects\\MovieCatalogProject\\MovieCatalogProject\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=SQL5023.Smarterasp.net;Initial Catalog=DB_9F305B_parzypr;User Id=DB_9F305B_parzypr_admin;Password=actina18" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\dom\\Documents\\Visual\ Studio\ 2015\\Projects\\MovieCatalogProject\\MovieCatalogProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

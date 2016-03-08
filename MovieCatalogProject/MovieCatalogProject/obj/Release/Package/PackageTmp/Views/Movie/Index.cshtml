@@ -1,0 +1,134 @@
+﻿@model MovieCatalogProject.ViewModels.MovieViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Informacje o filmie</h2>
+
+<div class="container">
+    <div class="row">
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col col-md-12 ">
+            <div class="panel panel-primary  bg ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@Html.DisplayFor(model => model.Title)</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col col-md-2">
+                        <img src=@Url.Content(@"~\images\"+Model.PosterUrl) width="150" height="220" />
+                    </div>
+                    <span>
+                        @Html.DisplayFor(model => model.Description)
+                    </span>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item  bg">
+                        <div class="col col-md-2"> Reżyseria:</div>
+                        @if (Model.Directors != null)
+                        {
+                            foreach (var item in Model.Directors)
+                            {
+                                <span> @item.FirstName @item.LastName, </span>
+                            }
+                        }
+                        else
+                        {
+                            <span> Brak danych </span>
+                        }
+                    </li>
+                    <li class="list-group-item  bg">
+                        <div class="col col-md-2"> Aktorzy:</div>
+                        @if (Model.Actors != null)
+                        {
+                            foreach (var item in Model.Actors)
+                            {
+                                <span> @item.FirstName @item.LastName, </span>
+                            }
+                        }
+                        else
+                        {
+                            <span> Brak danych </span>
+                        }
+                    </li>
+                    <li class="list-group-item  bg">
+                        <div class="col col-md-2"> Scenariusz:</div>
+                        @if (Model.Writers != null)
+                        {
+                            foreach (var item in Model.Writers)
+                            {
+                                <span> @item.FirstName @item.LastName, </span>
+                            }
+                        }
+                        else
+                        {
+                            <span> Brak danych </span>
+                        }
+                    </li>
+
+                    <li class="list-group-item  bg">
+                        <div class="col col-md-2">Kategoria:</div> @Model.Category
+                    </li>
+                    <li class="list-group-item  bg">
+                        <div class="col col-md-2">Rok produkcji:</div> @Model.ProductionYear
+                    </li>
+                    <li class="list-group-item  bg">
+                        <div class="tr">
+                            <div class="row">
+                                <div class="col col-md-12">
+                                    <div class="col col-md-2">Ocena filmu:</div>
+                                    <div class="col col-md-10">@Html.Partial("_VoteShow", Model.Votes)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item  bg">
+                        <div class="tr">
+                            <div class="row">
+
+                                <div class="col col-md-12">
+                                    <div class="col col-md-2">Oceń film:</div>
+                                    <div class="col col-md-6"> @Html.Partial("_VoteNow", Model.Id.ToString())</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <p>
+        @Html.ActionLink("Powrót", "MoviesList", new { }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Edytuj", "Edit", new {id=Model.Id }, new { @class = "btn btn-primary" })
+    </p>
+    @if (Request.IsAuthenticated)
+    {
+
+
+        <div class="row">
+            <div class="col col-md-12 ">
+                <div class="panel panel-primary  bg ">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Dodaj komentarz</h3>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm())
+                        {
+                        @Html.TextAreaFor(model => model.Comment, 5, 600, new { @class = "form-control" })
+                        <input type="submit" value="dodaj komentarz" class="btn btn-primary" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    @Html.Action("Comments", Model)
+
+</div>
