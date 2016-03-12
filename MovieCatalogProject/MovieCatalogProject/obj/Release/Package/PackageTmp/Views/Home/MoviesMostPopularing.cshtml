@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MovieCatalogProject.ViewModels.PopularMovieViewModel>
+
+
+<div class="container">
+
+    <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col col-md-2">
+                    <a href="/Movie/Index/@item.MovieId">
+                        <img src=@Url.Content(@"~\images\"+item.Poster) alt="@item.Title" class="img-responsive" width="160" height="250">
+                    </a>
+                </div>
+
+            }
+    </div>
+</div>
