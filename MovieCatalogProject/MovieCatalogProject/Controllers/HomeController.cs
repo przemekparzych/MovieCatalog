@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MovieCatalogProject.Models;
 using System.Data.Entity;
 using MovieCatalogProject.Models.Repository;
+using Newtonsoft.Json;
 
 namespace MovieCatalogProject.Controllers
 {
@@ -23,7 +24,13 @@ namespace MovieCatalogProject.Controllers
 
             return View();
         }
-
+        public string GetMoviesJson()
+        {
+            Models.Repository.MovieRepository repo = new Models.Repository.MovieRepository(db);
+            var movies = repo.GetAllMovies();
+            var moviesJson = JsonConvert.SerializeObject(movies);
+            return moviesJson;
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

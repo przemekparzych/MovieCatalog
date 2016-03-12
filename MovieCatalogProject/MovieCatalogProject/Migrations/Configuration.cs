@@ -21,6 +21,9 @@ namespace MovieCatalogProject.Migrations
               new Category { CategoryName = "Akcja" },
               new Category { CategoryName = "Horror" },
               new Category { CategoryName = "Romantyczny" },
+              new Category { CategoryName = "Triler" },
+              new Category { CategoryName = "Sci-Fi" },
+              new Category { CategoryName = "Animowany" },
               new Category { CategoryName = "Dramat" }
             );
             context.CastTypes.AddOrUpdate(

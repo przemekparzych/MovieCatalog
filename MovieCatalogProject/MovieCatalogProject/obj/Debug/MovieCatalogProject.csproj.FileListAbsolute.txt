@@ -245,8 +245,8 @@ D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\bin\Microsoft.Owin.S
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\bin\Microsoft.Owin.Security.Google.xml
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\obj\Debug\MovieCatalogProject.csprojResolveAssemblyReference.cache
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\obj\Debug\MovieCatalogProject.Migrations.ddd.resources
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\obj\Debug\MovieCatalogProject.csproj.GenerateResource.Cache
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\obj\Debug\MovieCatalogProject.dll
 D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\obj\Debug\MovieCatalogProject.pdb
+D:\Git\MovieCatalog\MovieCatalogProject\MovieCatalogProject\obj\Debug\MovieCatalogProject.csprojResolveAssemblyReference.cache

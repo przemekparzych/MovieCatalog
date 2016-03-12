@@ -65,6 +65,7 @@ namespace MovieCatalogProject.Controllers
         {
             return PartialView(new CommentViewModel());
         }
+        [Authorize]
         public ActionResult Create()
         {
             HttpCookie cookie = Request.Cookies["casts"];
@@ -79,9 +80,11 @@ namespace MovieCatalogProject.Controllers
             ViewBag.Casts = casts;
             return View();
         }
+
         [HttpPost]
         public ActionResult Create([Bind(Include = "Title, Description, ProductionYear, Category, Cast")]CreateMovieViewModel movie, HttpPostedFileBase poster)
         {
+            int id = 0;
             try
             {
                 if (ModelState.IsValid)
@@ -105,6 +108,7 @@ namespace MovieCatalogProject.Controllers
                         ProductionYear = movie.ProductionYear
                     };
                    var movieResult = db.Set<Movie>().Add(movieModel);
+                    id = movie.Id;
                     db.SaveChanges();
                     var casts = movie.Cast;
                     foreach(var item in casts)
@@ -122,7 +126,7 @@ namespace MovieCatalogProject.Controllers
             }
             ViewBag.Categories = GetCategories();
             ViewBag.CastsTypes = GetCastTypes();
-            return View();
+            return View("Index", id);
         }
         public ActionResult Edit(int id)
         {
@@ -131,6 +135,7 @@ namespace MovieCatalogProject.Controllers
             ViewBag.CastsTypes = GetCastTypes();
             return View(repo.GetMovie(id));
         }
+
         public JsonResult SendCast(CastViewModel cast)
         {        
             cast.CastType = GetCastTypes().Where(p => p.Value == cast.CastTypeId).FirstOrDefault().Text;

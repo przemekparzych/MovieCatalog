@@ -14,17 +14,15 @@
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 <h2>Create</h2>
 <link href="~/Content/Site.css" rel="stylesheet" />
-
-
 <div class="row">
     <div class="col col-md-8 ">
-@using (Html.BeginForm("Create", "Movie", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-        <div class="panel panel-primary  bg ">
-            <div class="panel-heading">
-                <h3 class="panel-title">Dodaj film</h3>
-            </div>
-            <div class="panel-body">
+        @using (Html.BeginForm("Create", "Movie", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="panel panel-primary  bg ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Dodaj film</h3>
+                </div>
+                <div class="panel-body">
 
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -53,7 +51,7 @@
                     <div class="form-group">
                         <div class="control-label col-md-6">Plakat</div>
                         <div class="col-md-6">
-                            <input type="file" name="poster" id="poster" class = "form-control" />
+                            <input type="file" name="poster" id="poster" class="form-control" />
                         </div>
                     </div>
 
@@ -74,15 +72,15 @@
 
                     </div>
 
-                   
 
-                
 
+
+
+                </div>
             </div>
-        </div>
-        <p></p>
-        <div id="info" class="form-group"></div>
-}
+            <p></p>
+            <div id="info" class="form-group"></div>
+        }
         <div class="panel panel-primary  bg">
             <div class="panel-heading">
                 <h3 class="panel-title">Dodaj członka zespołu</h3>
@@ -108,14 +106,11 @@
                         </div>
 
                     </div>
-                 
+
                     <input type="submit" value="Dodaj członka obsady filmu" class="btn btn-default" />
 
                 </form>
-                
-                
-
-            </div>
+          
         </div>
 
     </div>
@@ -155,7 +150,7 @@
                     "<th>Nazwisko<th></tr>";
                     for (var i = 0; i < jsonObj.Casts.length; i++) {
                         content += "<tr><td><select class=\"form-control\" id=\"Cast[" + i + "].CastTypeId\" name=\"Cast[" + i + "].CastTypeId\">";
-                    
+
                         for (var j = 0; j < 3; j++) {
                             if (j + 1 == jsonObj.Casts[i].CastTypeId) {
                                 content += "<option selected=\"true\" value=\"" + jsonObj.CastTypes[j].Value + "\">" + jsonObj.CastTypes[j].Text + "<\option>";
@@ -163,10 +158,10 @@
                             else {
                                 content += "<option value=\"" + jsonObj.CastTypes[j].Value + "\">" + jsonObj.CastTypes[j].Text + "<\option>";
                             }
-                       }
-                       content += "</select></td>" +
-                       "<td><input type=\"text\" id=\"Cast[" + i + "].FirstName\" name=\"Cast[" + i + "].Person.FirstName\" value=\"" + jsonObj.Casts[i].FirstName + "\"/></td>" +
-                       "<td><input type=\"text\" id=\"Cast[" + i + "].LastName\" name=\"Cast[" + i + "].Person.LastName\" value=\"" + jsonObj.Casts[i].LastName + "\"/><td></tr>";
+                        }
+                        content += "</select></td>" +
+                        "<td><input type=\"text\" id=\"Cast[" + i + "].FirstName\" name=\"Cast[" + i + "].Person.FirstName\" value=\"" + jsonObj.Casts[i].FirstName + "\"/></td>" +
+                        "<td><input type=\"text\" id=\"Cast[" + i + "].LastName\" name=\"Cast[" + i + "].Person.LastName\" value=\"" + jsonObj.Casts[i].LastName + "\"/><td></tr>";
                     }
                     content += "</table></div></div>";
                     info.html(

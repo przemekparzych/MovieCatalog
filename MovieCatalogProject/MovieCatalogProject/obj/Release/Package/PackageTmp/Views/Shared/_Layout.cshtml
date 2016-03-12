@@ -3,21 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/Site.css" rel="stylesheet" />
+
+
 </head>
 <body style="background-color:aliceblue">
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container"  ng-app="navModule" ng-controller="navController">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Katalog filmów", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        <a class="navbar-brand" href="/" ng-click="setIndex(0)" ng-class="(index==0) ? 'active' : ''">Katalog filmów</a>
+
                 <div class="navbar-header width-400">
                     <form class="navbar-form navbar-brand" role="search" method="post" action="/Movie/Search">
                         <div class="input-group">
@@ -32,11 +35,14 @@
                 </div><!-- /.col-lg-6 -->
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Filmy", "MoviesLIst", "Movie")</li>
-                    <li>@Html.ActionLink("Dodaj film", "Create", "Movie")</li> 
-                    <li>@Html.ActionLink("Contact", "Index", "Movie")</li>
-                </ul>
+
+                <div >
+                    <ul class="nav navbar-nav">
+                        <li ng-click="setIndex(1)" ng-class="(index==1) ? 'active' : ''">@Html.ActionLink("Filmy", "MoviesLIst", "Movie")</li>
+                        <li ng-click="setIndex(2)" ng-class="(index==2) ? 'active' : ''">@Html.ActionLink("Dodaj film", "Create", "Movie")</li>
+                        <li ng-click="setIndex(3)" ng-class="(index==3) ? 'active' : ''">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
 
                 @Html.Partial("_LoginPartial")
             </div>
@@ -46,12 +52,15 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Katalog filmów</p>
+            <p>&copy; @DateTime.Now.Year - Katalog filmów | Parzych Przemysław</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/navScript.js"></script>
 </body>
+
 </html>
